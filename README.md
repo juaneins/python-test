@@ -14,4 +14,4 @@ python -m unittest tests/test-calculator.py
 python -m unittest -v tests/test-calculator.py 
 
 # Le estoy indicando la carpeta en la que estan las pruebas que debe ejecutar
-python -m unittest discover -s test
+python -m unittest discover -v -s test

@@ -25,14 +25,15 @@ pip install requests
 # ejecutar prueba por linea de comandos
 python -m unittest tests.test_api_client
 
+python3 -m unittest tests.test_api_client.ApiClientTests.test_get_location_returns_side_effect
+
 # para hacer una pausa en la ejecución, se pued eusar ipdb:
 
     import ipdb 
     ipdb.set_trace()
 
 ## por ejemplo en el codigo se colocó en la seccion de codigo siguiente:
-
-``` def get_location(ip):
+ def get_location(ip):
     url = f'https://freeipapi.com/api/json/{ip}'
     response = requests.get(url)
     response.raise_for_status()
@@ -64,4 +65,6 @@ python -m unittest tests.test_api_client
 ...
 }
 
+## Side effects
 
+Ayuda a simular comportamientos para las pruebas
